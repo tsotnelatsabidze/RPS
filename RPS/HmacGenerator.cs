@@ -5,8 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classic_RPS
-{
+
     public class HmacGenerator
     {
         private readonly byte[] _key;
@@ -22,4 +21,4 @@ namespace Classic_RPS
             return hmac.ComputeHash(Encoding.UTF8.GetBytes(message));
         }
     }
-}
+

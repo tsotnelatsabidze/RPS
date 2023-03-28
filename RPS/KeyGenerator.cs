@@ -5,8 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Classic_RPS
-{
+
     public class KeyGenerator
     {
         public static byte[] GenerateKey()
@@ -17,4 +16,4 @@ namespace Classic_RPS
             return key;
         }
     }
-}
+

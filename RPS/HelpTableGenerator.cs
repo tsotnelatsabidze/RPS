@@ -8,7 +8,7 @@
         Console.Write("".PadRight(cellWidth));
         for (int i = 0; i < moves.Length; i++)
         {
-            Console.Write(moves[i].PadLeft((cellWidth - moves[i].Length) / 2).PadRight(cellWidth));
+            Console.Write(moves[i].PadLeft((cellWidth + moves[i].Length) / 2).PadRight(cellWidth));
         }
         Console.WriteLine();
 
@@ -45,13 +45,13 @@
                         cellColor = "\u001b[31m"; // Red
                     }
                 }
-                Console.Write(cellColor + cellText.PadLeft((cellWidth - cellText.Length) / 2).PadRight(cellWidth) + "\u001b[0m" + "|");
+                Console.Write(cellColor + cellText.PadLeft((cellWidth + cellText.Length) / 2).PadRight(cellWidth) + "\u001b[0m" + "|");
             }
             Console.WriteLine();
             Console.Write("".PadRight(cellWidth, '-'));
             for (int j = 0; j < moves.Length; j++)
             {
-                Console.Write("".PadRight(cellWidth, '-') + "+");
+                Console.Write("".PadRight(cellWidth, '-'));
             }
             Console.WriteLine();
         }

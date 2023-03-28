@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace Classic_RPS
-{
     public class GameRules
     {
         private readonly string[] _moves;
@@ -36,4 +30,4 @@ namespace Classic_RPS
             }
         }
     }
-}
+

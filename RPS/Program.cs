@@ -1,6 +1,4 @@
-﻿using Classic_RPS;
-using System;
-using System.Linq;
+﻿
 using System.Security.Cryptography;
 using System.Text;
 
@@ -10,10 +8,25 @@ namespace RockPaperScissors
     {
         public static void Main(string[] args)
         {
-            if (args.Length < 3 || args.Length % 2 == 0 || args.Distinct().Count() != args.Length)
+            bool error = false;
+            if (args.Length < 3)
             {
-                Console.WriteLine("Error: Invalid number of arguments. Please provide an odd number of non-repeating strings greater than or equal to 3.");
-                Console.WriteLine("Example: dotnet run Rock Paper Scissors Lizard Spock");
+                Console.WriteLine("Error: The number of arguments must be greater than or equal to 3.");
+                error = true;
+            }
+            if (args.Length % 2 == 0)
+            {
+                Console.WriteLine("Error: The number of arguments must be odd.");
+                error = true;
+            }
+            if (args.Distinct().Count() != args.Length)
+            {
+                Console.WriteLine("Error: The arguments must be non-repeating.");
+                error = true;
+            }
+            if (error)
+            {
+                Console.WriteLine("Example of correct usage: Rock Paper Scissors ");
                 return;
             }
 
