@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 
     public class KeyGenerator
+{
+    public static byte[] GenerateKey()
     {
-        public static byte[] GenerateKey()
-        {
-            using var rng = new RNGCryptoServiceProvider();
-            var key = new byte[32];
-            rng.GetBytes(key);
-            return key;
-        }
+        var key = new byte[32];
+        RandomNumberGenerator.Fill(key);
+        return key;
     }
-
+}
