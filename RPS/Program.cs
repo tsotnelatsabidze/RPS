@@ -1,4 +1,5 @@
 ﻿
+using RPS;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -60,7 +61,8 @@ namespace RockPaperScissors
                     var input = Console.ReadLine();
                     if (input.Equals("H", StringComparison.OrdinalIgnoreCase))
                     {
-                        HelpTableGenerator.DisplayHelp(moves);
+                        var Htg = new HelpTableGenerator(new ConsolePresenter());
+                        Htg.DisplayHelp(moves);
                         continue;
                     }
 
